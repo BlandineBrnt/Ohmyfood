@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/tablette.css">
+    <link rel="stylesheet" href="css/mobile.css"media="screen and (max-width:767px)">
+    <link rel="stylesheet" href="css/tablette.css"media="screen and (max-width:991px)">
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,14 +30,15 @@
                 <img src="images\logo\ohmyfood.png" alt="Logo Ohmyfood">
             </a>
         </div>
+    </header>
 
+    <main>        
         <form class="searchbox">
             <button>
-            <i class="fas fa-map-marker-alt"></i>
-            <input type="text"placeholder=Paris,Belleville>
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text"placeholder=Paris,Belleville>
             </button>
         </form>
-
         <section id="présentation">
             <h1>Réservez le menu qui vous convient</h1>
             <span class="soustitre">Découvrez des restaurants d'exception, sélectionnés par nos soins</span>
@@ -131,8 +132,7 @@
             </div>
 
         </section>
-    </header>
-
+    </main>
     <footer>
         <h2 class="h2_footer">ohmyfood</h2>
 
