@@ -1,130 +1,445 @@
 body{
     font-family: 'Roboto', sans-serif;
-    
-     
 }
 
 .police-shrikhand{
     font-family: 'Shrikhand', cursive; 
-
 }
 
 :root{
-    violet: #9356dc;
-    pink: #ff76da;
-    blue: #99e2d0;
-
+    --violet: #9356dc;
+    --pink: #ff76da;
+    --blue: #99e2d0;
 }
+
 
 header{
     display: flex;
     justify-content: center;
     margin: 18px 0;
-    
 }
+
 #logo{
-    
     height: 34px;   
 }
 
 #logo img{
     width: 170px;
-    
 }
+
 .searchbox {
     display: flex;
     justify-content: center;
-    margin: 0;
-    
-    
-}
-
-.searchbox button {
-    
     background-color: #EAEAEA;
-    width: 100%;
-    border-style: none;
-    height: 55px;
-    box-shadow: 1em #D5D5D5
+    height: 60px;
+    align-items: center;
 }
 
-.searchbox button i{
-    padding: 15px;
-    font-size: 18px;
-    
+.searchbox label{
+    font-size: 1.5em;
+    margin-right: 5%;
 }
 
-.searchbox button input{
+.searchbox input{
     border-style: none;
     background-color: #EAEAEA;
     font-weight: bold;
-    
+    height: 30px;
+    color: #353535;
 } 
 
-.searchbox button input::placeholder{
+.searchbox input::placeholder{
     color: #353535;
     border-style: none;
-    
 }
 
-#présentation{
+#presentation{
     display: flex;
     flex-direction: column;
     text-align: center;    
+    align-items: center;
     background-color:#F6F6F6;    
-    height: 300px;    
+    padding: 70px 5%;
 }
 
-#présentation h1 {
-    font-size: 25px;
-    margin: 30px 30px 0px 30px;
-    padding: 15px 15px 5px 15px;
-    font-weight: 900;
+#presentation h1{ 
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 26px;
 }
-.soustitre{
+
+#presentation .soustitre{
     font-size: 19px;
-    margin: 10px 20px 20px 20px;
     color: #414141;
+    margin-block-start: 0.5em;
+    margin-block-end: 1.5em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
-#présentation a{
-    margin: 15px;
-    
-}
-.btn{
-    border-radius: 50px;
-    height: 54px;
-    width: 220px;
+
+#btn a{
+    text-decoration: none;
     color: white;
     background: linear-gradient(180deg, #ff76da 0%, #9356dc 100%);
-    border-style: none;
-    transition: background-color 1s;
-    
-}
-.btn:hover{
-
-    box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
-    background: linear-gradient(180deg, #9356dc 0%, #ff76da 100%);
-    
-}
-
-#fonctionnement{
-    margin: 3%;
-    height: 400px;
-
-}
-
-h2{
-    font-size: 25px;
-    font-weight: 900;
-    margin-top: 50px;
-}
-
-.btn-fonctionnement {
-    
     display: flex;
     align-items: center;
-    height: 68px;
-    padding: 5px 15px 35px 15px;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 18px;
+    transition: background-color 1s;    
+}
+
+#btn a:hover{
+    box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
+    background: linear-gradient(180deg, #9356dc 0%, #ff76da 100%);
+}
+
+    /*FONCTIONNEMENT*/
+
+#fonctionnement {
+    justify-content: space-around;
+    display: flex;
+    margin: 5%;
+    height: 375px;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+#fonctionnement h2{
+    margin: 15px;
+}
+
+#fonctionnement .btn-fonctionnement{
+    display: flex;
+    align-content: center;
+   /* justify-content: center;*/
+    align-items: center;
+}
+
+#fonctionnement .btn-fonctionnement .numero{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background: var(--violet);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -15px;
+    z-index: 0;
+}
+
+#fonctionnement .btn-fonctionnement div{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background: #F6F6F6;
+    padding: 1% 3%;
+    border-radius: 20px;
+    min-width:90%;
+    min-height: 25px;
+    height: 60px;
+}
+
+#fonctionnement .btn-fonctionnement div:hover{
+    box-shadow: 1px 11px 14px 0px #e7e7e7;
+    background-color: #F5EDFF;
+    
+   
+}
+#fonctionnement .btn-fonctionnement div:hover i{
+    color: #9356dc;
+}
+
+#fonctionnement .btn-fonctionnement div i{
+    margin: 17px;
+    color:#7a7a7a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+#fonctionnement .btn-fonctionnement div p{
+    font-weight: 700;
+}
+
+/*NOM DE RESTAURANTS*/
+
+#restaurants{
+   
+    margin: 5% 5% 0;
+    background-color: #F6F6F6;
+    padding-bottom: 45px;
+}
+#restaurants h2{
+    padding: 50px 15px 15px; 
+}
+.fiche-restaurant{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    gap: 20px;
+}
+.fiche-restaurant article{
+    position: relative;
+    background-color: white;
+    border-radius: 25px 25px 25px 25px;
+    height: 275px;
+    transition: 0.5s;
+
+}
+.fiche-restaurant article:hover{
+    box-shadow: 1px 11px 14px 0px #e7e7e7;
+    transform: scale(1.01);
+}
+.fiche-restaurant article a{
+    text-decoration: none;
+    color: black;
+}
+
+.fiche-restaurant img {
+    min-width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+.nouveau-clignotant{
+
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    z-index: 6;
+    background-color: #99E2D0;
+    color: #058a69;
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+    pointer-events: unset;
+    cursor: default;
+}
+article.nom-restaurant{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 150px;
+}
+
+.nom-restaurant{
+    margin: 15px 0 5px 10px;
+    position: relative;
+
+}  
+.nom-restaurant h3{
+    justify-content: flex-start;
+}
+.nom-restaurant p{
+    font-size: 18px;
+    justify-content: flex-start;
+    margin-top: -13px;
+}
+
+
+.coeurplein {
+    position: absolute;
+    bottom: 35px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 8;
     
 }
-  
+.coeurplein:hover {
+     
+    opacity: 1;
+    background: linear-gradient(180deg, #9356dc 0%, #ff76da 100%);
+}
+   
+.coeurvide {
+    position: absolute;
+    bottom: 35px;
+    right: 15px;
+    font-size: 26px;
+    cursor: pointer;
+    z-index: 6;
+    opacity: 1;
+}
+.coeurvide:hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: #353535;
+    padding:10px 5% 15px;
+}
+.h2_footer{
+    font-family: 'Shrikhand', cursive;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+h4{
+    font-weight: 400;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.restaurant-et-partenaire{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.restaurant-et-partenaire a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 30px;
+    font-weight: 400;
+    
+}
+.restaurant-et-partenaire a i{
+
+    margin: 5px 15px 5px 0;
+    font-size: 15px;
+   
+}
+
+.restaurant-et-partenaire a i.fas.fa-hands-helping{
+    margin: 5px 12px 5px 0;
+    font-size: 12px;
+}
+.mentions-et-contact{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.mentions-et-contact a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+/*MENU*/
+
+header{
+   display:flex;
+   align-content: center;
+   align-items: center;
+     
+}
+.en-tete a{
+    position: absolute;
+    left: 22px;
+    margin-top: 5px;
+    text-decoration: none;
+    color:#353535 ;
+    font-weight: bold;
+    font-size: 20px;
+   
+    
+}
+.en-tete img{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-general{  
+    padding-bottom: 45px;
+    
+}
+.container img{
+    min-width: 100%;
+    height: 260px;
+    object-fit: cover;
+    
+}
+.menu{
+    border-radius: 25px 25px 0 0;
+    background-color: #F6F6F6;
+    position: relative;
+    margin-top: -50px;
+   
+}
+.le-restaurant{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-family:'Shrikhand', cursive;
+    padding: 10px;
+    font-size: 15px;
+}
+.le-restaurant i{
+    margin-right: 15px;
+    font-size: 22px;
+    font-weight: 300;
+
+}
+.menu-description{
+    margin: 5%;
+}
+.h2-menu{
+    display:inline;
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #353535;
+
+}
+.h2-menu::after{
+   content: "";
+   display: block;
+   position: absolute;
+   width: 0%;
+   height: 3px;
+   background: var(--blue);
+   
+   transition: width 0.2s ease-in-out;
+}
+.h2-menu:hover::after{
+    width: 100%;
+}
+.menu-intitule{
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    margin: 20px 0;
+
+}
+.menu-intitule:hover{
+    box-shadow:1px 11px 14px 0px #e8e8e8;
+}
+.h3-nom-plat{
+    margin-block-start: 2px;
+    margin-block-end: 5px;
+   
+}
+.menu-prix{
+    display: flex;
+    justify-content: flex-end;
+}
+.bouton2{
+    
+    max-width: 30%;
+}
