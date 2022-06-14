@@ -12,7 +12,6 @@ body{
     --blue: #99e2d0;
 }
 
-
 header{
     display: flex;
     justify-content: center;
@@ -433,11 +432,14 @@ header{
 .h3-nom-plat{
     margin-block-start: 2px;
     margin-block-end: 5px;
+    position: relative;
    
 }
 .menu-prix{
-    display: flex;
-    justify-content: flex-end;
+    /*display: flex;
+    justify-content: flex-end;*/
+    position: absolute;
+    right: 10%
 }
 .bouton2{
     
