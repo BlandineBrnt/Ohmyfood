@@ -11,9 +11,77 @@ body{
     --pink: #ff76da;
     --blue: #99e2d0;
 }
-
-header{
+/*.loader-container{
+    background: #EAEAEA;
+    opacity: 0.9;
+    z-index: 2;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    animation: time 5s;
+    animation-fill-mode: forwards;
+}
+@keyframes time{
+    0%{
+        transform: scale(0.5s);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1s);
+        opacity: 0;
+    }
+}
+
+.loader{
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 8px solid transparent;
+    border-top-color: var(--violet);
+    animation: spin 2s linear infinite;
+
+}
+.loader::before, .loader::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 8px solid transparent;
+
+}
+.loader::before{
+    top: 10px;
+    left: 10px;
+    right:10px;
+    bottom: 10px;
+    border-top-color:var(--pink) ;
+    animation: spin 3s linear infinite;
+    
+}
+.loader::after{
+    top: 25px;
+    left: 25px;
+    right:25px;
+    bottom: 25px;
+    border-top-color:var(--blue);
+    animation: spin 1.5s linear infinite;
+
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}*/
+header{
+    
+    z-index: 1;
     justify-content: center;
     margin: 18px 0;
 }
@@ -78,13 +146,15 @@ header{
     margin-inline-end: 0px;
 }
 
+#btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #btn a{
     text-decoration: none;
     color: white;
     background: linear-gradient(180deg, #ff76da 0%, #9356dc 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50px;
     padding: 15px;
     font-size: 18px;
@@ -176,6 +246,7 @@ header{
 }
 #restaurants h2{
     padding: 50px 15px 15px; 
+    margin-left: 15px;
 }
 .fiche-restaurant{
     display: flex;
@@ -246,36 +317,35 @@ article.nom-restaurant{
     margin-top: -13px;
 }
 
-
-.coeurplein {
+.coeur i{
     position: absolute;
-    bottom: 35px;
+    bottom: 30px;
     right: 15px;
     font-size: 26px;
     cursor: pointer;
-    opacity: 0;
-    z-index: 8;
     
 }
-.coeurplein:hover {
-     
-    opacity: 1;
-    background: linear-gradient(180deg, #9356dc 0%, #ff76da 100%);
-}
+
+
    
-.coeurvide {
-    position: absolute;
-    bottom: 35px;
-    right: 15px;
-    font-size: 26px;
-    cursor: pointer;
-    z-index: 6;
-    opacity: 1;
-}
-.coeurvide:hover {
+i.coeurplein {
+    color: transparent;
+    background-image: linear-gradient(180deg, #9356dc 0%, #ff76da 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    
     opacity: 0;
-    z-index: 1;
+    
 }
+i.coeurplein:hover{
+    transform: scale(1.1);
+    opacity: 1;
+   
+
+}
+
+
 
 /*FOOTER*/
 
@@ -362,9 +432,11 @@ header{
 }
 
 .menu-general{  
-    padding-bottom: 45px;
+    padding-bottom: 50px;
+    background-color: #F6F6F6;
     
 }
+
 .container img{
     min-width: 100%;
     height: 260px;
@@ -378,14 +450,24 @@ header{
     margin-top: -50px;
    
 }
+.menu .coeur{
+   position: relative;
+   margin-right: 25px;
+   bottom: 7px;
+}
 .le-restaurant{
     display: flex;
     align-items: center;
     justify-content:space-between;
     font-family:'Shrikhand', cursive;
-    padding: 10px;
+    padding: 10px ;
     font-size: 15px;
+    margin:0 18px ;
 }
+.le-restaurant h1{
+    margin-left: 10px;
+}
+
 .le-restaurant i{
     margin-right: 15px;
     font-size: 22px;
@@ -408,7 +490,7 @@ header{
    content: "";
    display: block;
    position: absolute;
-   width: 0%;
+   width: 50%;
    height: 3px;
    background: var(--blue);
    
@@ -419,12 +501,13 @@ header{
 }
 .menu-intitule{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 25px;
     background-color: white;
-    padding: 10px;
+    padding: 10px ;
     margin: 20px 0;
-
+    text-decoration: none;
+    color: black;
 }
 .menu-intitule:hover{
     box-shadow:1px 11px 14px 0px #e8e8e8;
@@ -438,10 +521,56 @@ header{
 .menu-prix{
     /*display: flex;
     justify-content: flex-end;*/
-    position: absolute;
-    right: 10%
+    /* position: absolute;
+    right: 10% */
 }
-.bouton2{
+.bouton2{    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+
+.menu-intitule .menu-titre-description{
+    width: 90%;
+}
+
+.menu-intitule .menu-titre-description h3, .menu-intitule .menu-titre-description p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-intitule .menu-prix{
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+
+.menu-intitule .menu-valider{
+    width: 0%;
+    display: none;
+    background-color: #99E2D0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+       
+       
+}
+
+.menu-intitule:hover .menu-titre-description{
+    width: 88%;
+}
+
+.menu-intitule:hover .menu-valider{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 10%;
     
-    max-width: 30%;
+    
 }

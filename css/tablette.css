@@ -1,0 +1,40 @@
+#fonctionnement h2{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    height: 35px;
+}
+#fonctionnement .btn-fonctionnement div{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    max-width: 30%;
+}
+#restaurants h2{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.fiche-restaurant{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+.fiche-restaurant article{
+    width: 45%;
+    margin: auto;
+    gap: 25px
+}
+/* MENU*/
+#logo{
+    height: 60px;
+}
+#logo img{
+    width: 300px;
+}
+
+.container img{
+    min-height: 500px;
+}
+
