@@ -11,3 +11,14 @@ html{
 .police-shrikhand{
     font-family: 'Shrikhand', cursive; 
 }*/
+
+
+.fonctionnement-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#fonctionnement .btn-fonctionnement{
+    width: 30%;
+}

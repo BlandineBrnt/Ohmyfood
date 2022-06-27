@@ -1,9 +1,3 @@
-#fonctionnement h2{
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-    height: 35px;
-}
 #fonctionnement .btn-fonctionnement div{
     display: flex;
     align-items: center;
@@ -35,6 +29,28 @@
 }
 
 .container img{
-    min-height: 500px;
+   
 }
 
+.fonctionnement-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+#fonctionnement{
+    height: 275px;
+    margin-top: 10px ;
+    padding-bottom: 15px;
+}
+
+#fonctionnement .btn-fonctionnement{
+    width: 45%;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 35px; 
+}
