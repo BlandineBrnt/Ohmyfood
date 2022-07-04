@@ -543,43 +543,32 @@ header{
     text-decoration: none;
     color: black;
     height: 70px;
+   
 }
 
 .menu-intitule:hover{
     box-shadow:1px 11px 14px 0px #e8e8e8;
+    
 }
 
 .h3-nom-plat{
     margin-block-start: 2px;
     margin-block-end: 5px;
-    position: relative;
+    /*position: relative;*/
    
 }
 
-/* .menu-prix{
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    right: 10%
-} */
-
-.bouton2{    
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-}
-
 .menu-intitule .menu-titre-description{
-    width: 90%;
+    width: 80%;
     padding: 10px;
 }
 
-.menu-intitule .menu-titre-description h3, .menu-intitule .menu-titre-description p{
+.menu-intitule .menu-titre-description h3 .menu-intitule .menu-titre-description p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 
 .menu-intitule .menu-prix{
     display: flex;
@@ -588,19 +577,20 @@ header{
     margin-right: 2%;
 }
 
-.menu-intitule .menu-valider{
+.menu-intitule .menu-valider {
     width: 0px;
     display: none;
-    height: 70px;
-    transition: width 2s linear;
+    height: 70px;  
     
 }
 
+
 .menu-intitule:hover .menu-titre-description{
     width: 85%;
+    
 }
 
-.menu-intitule:hover .menu-valider{
+.menu-intitule:hover .menu-valider {
     display: flex;
     justify-content: center;
     /*transition-duration: 4s ;*/
@@ -611,17 +601,13 @@ header{
     color: white;   
 }
 
-/*.menu-intitule:hover i{
-    transform:  rotate(360deg);
-    transition-duration: 500ms;
-}*/
+
 
 .menu-valider:hover i {
 
     transform:  rotate(360deg);
     transition-duration: 330ms;
 }
-
 .menu-1{
     animation: fadein 4s ease forwards ;
     opacity: 0;
@@ -654,4 +640,10 @@ header{
         opacity: 1;
         transform: translateY(0);
     }
+}
+.bouton2{    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
 }

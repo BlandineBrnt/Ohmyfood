@@ -29,7 +29,7 @@
 }
 
 .container img{
-   
+   height: 400px;
 }
 
 .fonctionnement-cards {
@@ -53,4 +53,32 @@ h2{
     display: flex;
     justify-content: center;
     font-size: 35px; 
+}
+.le-restaurant {
+    justify-content: center;
+    font-size: 22px;
+    padding: 20px;
+}
+.menu-description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 30px;
+}
+.coeur i{
+    bottom: 50px;
+    font-size: 30px;
+}
+
+.menu-1{
+    max-width: 300px;
+
+}
+.menu-2{
+    max-width: 300px;
+
+}
+.menu-3{
+    min-width: 300px;
+
 }
