@@ -1,3 +1,6 @@
+        */*ACCUEIL*/
+        /*FONCTIONNEMENT*/
+
 #fonctionnement .btn-fonctionnement div{
     display: flex;
     align-items: center;
@@ -9,6 +12,7 @@
     justify-content: center;
     font-size: 35px;
 }
+        /*RESTAURANT*/
 
 .fiche-restaurant{
     flex-direction: row;
@@ -20,7 +24,9 @@
     margin: auto;
     gap: 25px
 }
-/* MENU*/
+        /* MENU*/
+        /*HEADER*/
+
 #logo{
     height: 60px;
 }
@@ -31,6 +37,7 @@
 .container img{
    height: 400px;
 }
+        /*FONCTIONNEMENT*/
 
 .fonctionnement-cards {
     display: flex;
@@ -49,36 +56,43 @@
 #fonctionnement .btn-fonctionnement{
     width: 45%;
 }
+
 h2{
     display: flex;
     justify-content: center;
     font-size: 35px; 
 }
+
+        /*MENU DESCRIPTION*/
+
 .le-restaurant {
-    justify-content: center;
+    justify-content: space-between;
     font-size: 22px;
-    padding: 20px;
+
 }
+
 .menu-description{
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content:space-around;
     gap: 30px;
+
 }
+
 .coeur i{
     bottom: 50px;
     font-size: 30px;
 }
 
-.menu-1{
-    max-width: 300px;
-
+.menu-1, .menu-2, .menu-3{
+    min-width: 370px;
 }
+/*
 .menu-2{
-    max-width: 300px;
-
+  
+    width: calc(100% - 4%)/3;
 }
 .menu-3{
-    min-width: 300px;
-
-}
+   
+    width: calc(100% - 4%)/3;
+}*/

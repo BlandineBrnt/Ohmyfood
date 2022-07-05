@@ -3,16 +3,6 @@ html{
 
 }
 
-/*body{
-    font-family: 'Roboto', sans-serif;
-    
-     
-}
-.police-shrikhand{
-    font-family: 'Shrikhand', cursive; 
-}*/
-
-
 .fonctionnement-cards {
     display: flex;
     flex-wrap: wrap;
